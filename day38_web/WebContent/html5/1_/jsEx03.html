@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>image 확대</title>
+
+<script type="text/javascript">
+	function imageSize() {
+		
+		if( backImg.style.pixelWidth < 500 ) {
+			backImg.style.pixelWidth += 3;
+			backImg.style.pixelHeight += 2;
+			window.setTimeout( "imageSize() " , 10 );
+		}
+	}
+
+</script>
+
+</head>
+<body  onload=" imageSize();">
+ <table border="1" width="700">
+ 	<tr>
+ 		<td width="700" bgcolor="blue">
+ 				<p align="center" ><strong><blink><font size="4" color="yellow" >
+ 					kosta 125 미니 홈페이지에 방문을 환영합니다.
+ 				</font></blink></strong>
+ 		</td>
+ 	</tr>
+ 	
+ 	<tr>
+ 		<td width="700" align="center">
+ 			<img src="back.jpg" align="center"  id="backImg" border="0" >
+ 		</td>
+ 	</tr>
+ </table>
+ <p>
+ 	<marquee behavior="scroll" direction="left" scrollamount="50">Your slide-in next goes here </marquee>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

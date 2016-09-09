@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+function isSame(obj1, obj2) {   // pw1, pw2 
+	var str1 = obj1.value;   // var str1 = frm.pw1.value;  
+	var str2 =  obj2.value;   // document.getElementById('pw2').value;
+	if(str1.length == 0 || str2.length == 0){
+		alert("입력하고 누르세요");
+		return false;
+	}
+</script>
+</head>
+<body background="background01.gif">
+	<br>
+	<center><h3>회원정보입력</h3></center>
+	<br>
+	<hr border="3">
+	<br><br><br>
+	<form name="frm" method="post">
+	<table align="center" border="" style="border-collapse:collapse;" bgcolor="white">
+		<tr>
+		<td align="center" bgcolor="ffd732">아 이 디</td>
+		<td><input type="text" name="name" placeholder="ID"></td>
+		</tr>
+		<tr>
+		<td align="center" bgcolor="ffd732">비밀번호</td>
+		<td><input type="password" name="pwd" placeholder="Password"></td>
+		</tr>
+		<tr>
+		<td align="center" bgcolor="ffd732">이름</td>
+		<td><input type="password" name="pwd" placeholder="Name"></td>
+		</tr>
+		<tr>
+		<td align="center" bgcolor="ffd732">주민등록번호</td>
+		<td>
+		<input type="text" name="jumin1" size="7"> - 
+		<input type="password" name="jumin2" size="7">
+		</td>
+		</tr>		
+		<tr>
+		<td align="center" bgcolor="ffd732">전화번호</td>
+		<td>
+		<select>
+			<option value="op1">010</option>
+			<option value="op2">011</option>
+			<option value="op3">016</option>
+		</select>
+		&nbsp;-&nbsp;<input type="text" name="phone" size="1">&nbsp;-&nbsp;
+		<input type="text" name="phone" size="1">
+		</td>
+		</tr>
+		<tr>
+		<td align="center" bgcolor="ffd732">직업</td>
+		<td>
+		<select>
+			<option value="op1">선택</option>
+			<option value="op2">직장인</option>
+			<option value="op3">노숙자</option>
+			<option value="op4">개발자</option>
+			<option value="op5">군인</option>
+			<option value="op6">주부</option>
+		</select>
+		</td>
+		</tr>
+		<tr>
+		<td align="center" bgcolor="ffd732">성별</td>
+		<td>
+		<input type="radio" name="gender" value="M">남
+		<input type="radio" name="gender" value="F">여
+		</td>
+		</tr>		
+		<tr>
+		<td align="center" bgcolor="ffd732">취미</td>
+		<td>
+		독서<input type="checkbox" name="hobby" value="chk1">
+		게임<input type="checkbox" name="hobby" value="chk2">
+		영화감상<input type="checkbox" name="hobby" value="chk3">
+		음악감상<input type="checkbox" name="hobby" value="chk3">
+		운동<input type="checkbox" name="hobby" value="chk3">
+		</td>
+		</tr>	
+		<tr>
+		<td align="center" bgcolor="ffd732">자기소개</td>
+		<td><textarea rows="8" cols="46" style="resize: none;"></textarea></td>
+		</tr>	
+		<tr>
+		<td colspan="2" align="center"> 
+		<input type="button" onclick="isSame(jumin1, jumin2)" value="등록하기">
+		<input type="reset" value="취소하기"> 
+		</td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

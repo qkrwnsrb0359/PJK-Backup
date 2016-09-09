@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+	function myFunction() {
+		var x = document.getElementById("fname");
+		x.value = x.value.toUpperCase();
+	}
+</script>
+</head>
+<body>
+	아이디 입력:
+	<input type="text" id="fname" onchange="myFunction()">
+	<p>INPUT에 포커스가 없어지면, 이전 값이 변했는 지 판단해서 항상 대문자로 만드는 예제입니다.</p>
+</body>
+</html>

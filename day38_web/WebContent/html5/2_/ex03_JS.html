@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="EUC-KR">
+<title>JavaScript 생성자함수 만들기</title>
+
+<script type="text/javascript">
+  var str = "string1 string2 string3“
+
+	alert( str.length );
+	
+	var start = str.indexOf( 'string2' );
+	alert( start ); 
+	alert( str.substr( start ) );
+
+	// 간단히,
+	alert( str.substr( str.indexOf( 'string2' ) );
+	
+	// str은 변하지 않는다.
+	alert( str );
+
+	var Foo = function() {
+		this.name = "bar";
+		this.nick = "buzz";
+		this.aNumber = 5;
+		this.doFoo = function() {
+			alert("I'm " + this.name +"\r\n" + this.aNumber + "\r\n" + this.nick);
+		};
+	}
+	var foo = new Foo();
+	foo.doFoo();
+
+//////매개변수 있는 생성자함수 ///////////////////////////
+	var Foo = function(name, nick) {
+		this.name = name;
+		this.nick = nick;
+	}
+	Foo.prototype.aNumber = 5;
+	Foo.prototype.doFoo = function() {
+		alert("I'm " + this.name);
+	};
+
+	var foo1 = new Foo("foo1", "nick1");
+	foo1.doFoo();
+
+	var foo2 = new Foo("foo2", "nick2");
+	foo2.doFoo();
+	///////////////////////////////////////////
+	
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

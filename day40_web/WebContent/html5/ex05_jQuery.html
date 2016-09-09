@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>th125 web project</title>
+<style type="text/css">
+	img {
+		width: 100px;
+		height: 100px;
+	}
+	td.a {
+		background: url("../images/img16.jpg") no-repeat center;
+	}
+	td.b {
+		background: url("../images/img17.jpg") no-repeat center;
+	}
+	td.c {
+		background: url("../images/img18.jpg") no-repeat center;
+	}
+	td.d {
+		background: url("../images/img15.jpg") no-repeat center;
+	}
+	td.e {
+		background: url("../images/img11.jpg") no-repeat center;
+	}
+	td.f {
+		background: url("../images/img12.jpg") no-repeat center;
+	}
+</style>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('img').click(function(e) {
+			var newc = $(this).attr("id");
+			var oldc = $("#full").attr("class");
+			
+			$("#full").fadeOut(function() {
+				$("#full").removeClass(oldc).addClass(newc).fadeIn('slow');
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+		<td id="full" class="a" rowspan="3" width="420"></td>
+		<td><img src="../images/im16.jpg" id="a"/></td>
+		<td><img src="../images/im17.jpg" id="b"/></td>
+		</tr>
+		<tr>
+		<td><img src="../images/im18.jpg" id="c"/></td>
+		<td><img src="../images/im15.jpg" id="d"/></td>
+		</tr>
+		<tr>
+		<td><img src="../images/im11.jpg" id="e"/></td>
+		<td><img src="../images/im12.jpg" id="f"/></td>
+		</tr>
+	</table>
+</body>
+</html>

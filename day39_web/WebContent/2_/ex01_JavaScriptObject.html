@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head><meta charset="EUC-KR">
+<title>JavaScript Object Test</title>
+
+<script type="text/javascript">
+	//객체 (JSON 표기)
+	var product = { 
+			제품명:'notbook' ,
+			년도:'2015' ,
+			원산지:'중국'
+	}
+	console.log(product.년도 + " / " + product.제품명 );
+	
+	var person = {
+			name:'강감찬' ,
+			addr:'서울시 강남구' ,
+			eat: function() {
+					document.write(this.name + '/ ' + this.addr );
+			}
+	}
+	person.eat();
+	//////////////////////////////////////////////
+	var member = {};
+	member.name = 'happydoyeon';
+	member.age = '20';
+	
+	member.print= function() {
+		document.write("<p><font color='blue' size='15'> " + member.name + " / " + member.age + "</font></p>");
+	}
+	
+	/* var member = {
+			name :  'happydoyeon' ,
+			age : '20'
+			print : function() {
+				document.write("<p><font color='blue' size='15'> " + member.name + " / " + member.age + "</font></p>");
+			}
+	} */
+	
+	member.print();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

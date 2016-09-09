@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery 정의 필터 셀렉터를 이용하여 폼 요소 다루기-:button, :text, :password</title>
+<style type="text/css">
+   div { padding: 5px 5px 5px 5px }
+    .item{float:left; width:100px; }
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {   
+      $('#regBtn:button').click(function(){
+		  invalidItem();
+		  clearInput();
+      });        
+      function invalidItem(){
+         if($('#userId:text').value == ''){
+        	 alert("아이디를 입력하세요."); 
+        	 return;   	 
+         }
+         var userName = $('#userName:text').attr('value');
+         if(userName == ''){
+        	 alert("이름을 입력하세요.");     
+        	 return;   	 
+         }
+         
+         if( $("#pwd:password").val() =="" || 
+             $("#pwdConfirm:password").val() == ""){
+        	 alert("암호를 입력하세요.");     
+        	 return;   	 
+         }
+         if($("#pwd:password").val() !=
+             $("#pwdConfirm:password").val()) {
+                alert("암호가 일치하지 않습니다.");
+                return;
+         }
+         alert(userName+"님 회원 가입을 축하합니다.");
+      }          
+   });
+   function clearInput(){
+         $('#userId').attr('text', '1');
+         $('#userName').attr('text', '');
+         $('#pwd').attr('password', '');
+         $('#pwdConfirm').attr('password', '');
+   } 
+</script>   
+</head> 
+<body>
+   <center>   
+     <div> <span class="item"> 아이디 * </span> <input id="userId" type="text"></div>
+     <div> <span class="item"> 이름   * </span> <input id="userName" type="text"></div>
+     <div> <span class="item"> 암호   * </span> <input id="pwd" type="password"></div>
+     <div> <span class="item"> 암호 확인  * </span> <input id="pwdConfirm" type="password"></div>
+     <input type="button" id="regBtn" value="회원가입">         
+   </center>
+</body>
+</html>

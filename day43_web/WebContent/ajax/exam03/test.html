@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="httprequest.js"></script>
+<script>
+	function clearOnClick() {
+		var debug = document.getElementById("debug");
+		debug.value = "";
+	}
+	
+	function debugTrace(msg) {
+		var debug = document.getElementById("debug");
+		debug.value += msg;
+	}
+	
+	function sendOnClick() {
+		sendRequest("Post", "xmlTest.xml", null, callback);
+	}
+	
+	function callback() {
+		var msg = '';
+		if(httpRequest.readyState == 4) {
+			if(httpRequest.status == 200) {
+				var xmlDoc = httpRequest.responseXML;  //xml파일로 된것을 읽어옴
+				var bookList = xmlDoc.getElementsByTagName("book");
+				msg += "책 : " + bookList.length + "(권)\n";
+				for(var i = 0; i < bookList.length; i++) {
+					var boo = bookList[i];
+					var name = boo.getElementsByTagName("name")[0].firstChild.nodeValue;
+					var title = boo.getElementsByTagName("title")[0].firstChild.nodeValue;
+					var makeyear = boo.getElementsByTagName("makeyear")[0].firstChild.nodeValue;
+					msg += title + " " + name + '(' + makeyear + ')' + '\n';
+				}
+			}
+		}
+		debugTrace(msg);
+	}
+</script>
+</head>
+<body>
+	<form name="form1">
+		<textarea rows="15" cols="80" id="debug" name="debug"></textarea><br/>
+		
+		<input type="button" value="서버에 자료요청" onclick="sendOnClick()" />
+		<input type="button" value="초기화" onclick="clearOnClick()" />
+	</form>
+</body>
+</html>

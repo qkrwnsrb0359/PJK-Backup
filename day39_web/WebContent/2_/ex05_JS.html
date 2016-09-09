@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><meta charset="EUC-KR">
+<title>Mouse Event</title>
+<script type="text/javascript">
+	function MouseOver(  ) {
+		/* var str = frm.item.value;
+		alert(str); */
+		
+		var str = document.getElementsByTagName(input).toString();
+		alert(str); 
+		document.getElementById("myBtn").innerHTML = Date();
+	}	
+	function MouseOut( ) {
+		document.getElementById("myBtn").innerHTML = "오늘의 날짜/시간";
+	}
+	function displayDate() {
+		document.write(new Date());
+	}
+</script>
+
+</head>
+<body  >
+ <form name="frm">
+ 	<h1 id="myBtn" onmouseover="MouseOver()"  onmouseout="MouseOut( )" >오늘의 날짜/시간</h1> <br><br>
+ 	<input type="text"  id="item" value="오늘의 날짜/시간" > 
+</form>
+</body>
+</html>
+
+
+
+
+
+
+

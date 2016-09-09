@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="EUC-KR">
+<title>JavaScript Array Test</title>
+
+<script type="text/javascript">
+	var su = prompt("정수 숫자를 넣어주세요 ", 0 );
+	var x =10.220 ;
+	var students = [] ;
+	students.push({이름:'이순신', 국어:80, 영어:70, 수학:90 } );
+	students.push({이름:'강감찬', 국어:88, 영어:100, 수학:50 } );
+	document.writeln("입력 받은 숫자 : " + su  + "<br>")
+	document.write(x);
+	alert( typeof x ); 
+	
+	for(var i in students ){
+		//console.log(i);
+		students[i].getsum = function() {
+			return this.국어 + this.영어 + this.수학;
+		}
+		
+		students[i].getavg = function() {
+			return this.getsum() / 3 ;
+		}
+	}
+	
+	var print = "" ;
+	for( var i in students ) {
+		with(students[i]) {
+			print += getsum() + '/ ' + getavg() + '\n'
+		}
+	}
+	
+	alert(print);
+	//////////////////////////////////////////////////////////
+	alert( "첫 번째 문자열 " + " 두 번째 문자열" ); 
+
+	var str = "number " + 5;
+	alert ( str + " : " + typeof( str ) );
+
+	str = 5 + "5";
+	alert ( str + " : " + typeof( str ) );
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>th125 web project</title>
+<script type="text/javascript">
+	function clickNumber(data) {
+		var monitor = document.getElementById("monitor");
+		
+		if(data == 'C') {
+			monitor.value = '';
+		} else if(data != '=') {
+			monitor.value += data;
+		} else {
+			monitor.value = eval(monitor.value);
+		}
+	}
+</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="monitor"> <br />
+		<input type="button" value="1" onclick="clickNumber(this.value)"/>
+		<input type="button" value="2" onclick="clickNumber(this.value)"/>
+		<input type="button" value="3" onclick="clickNumber(this.value)"/><br>
+		<input type="button" value="4" onclick="clickNumber(this.value)"/>
+		<input type="button" value="5" onclick="clickNumber(this.value)"/>
+		<input type="button" value="6" onclick="clickNumber(this.value)"/><br>
+		<input type="button" value="7" onclick="clickNumber(this.value)"/>
+		<input type="button" value="8" onclick="clickNumber(this.value)"/>
+		<input type="button" value="9" onclick="clickNumber(this.value)"/><br>
+		<input type="button" value="C" onclick="clickNumber(this.value)"/>	
+		<input type="button" value="0" onclick="clickNumber(this.value)"/><br>
+		<input type="button" value="+" onclick="clickNumber(this.value)"/>	
+		<input type="button" value="-" onclick="clickNumber(this.value)"/>	
+		<input type="button" value="=" onclick="clickNumber(this.value)"/>
+				
+	</form>
+</body>
+</html>

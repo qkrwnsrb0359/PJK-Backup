@@ -1,0 +1,38 @@
+@CHARSET "EUC-KR";
+body {
+	text-align: center;
+	background: 
+}
+
+h1 {
+	color: blue;
+	font-size: 35px;
+}
+
+table {
+	margin: auto;
+    width: 30%;
+    border: 1px solid #000000;
+    border-collapse:collapse;
+}
+
+tr {
+	height: 50px;
+	border: 1px solid #000000;
+	border-collapse:collapse;
+}
+
+td {
+	border: 1px solid #000000;
+	border-collapse:collapse;
+}
+
+#main {
+	background-color: #FAD8FA;
+	
+	font-weight: bold;
+}
+
+#gray {
+	background-color: #E4E2E4;
+}

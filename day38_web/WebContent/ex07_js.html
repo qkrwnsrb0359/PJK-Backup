@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>th125 web project</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var tag = document.createElement("h1");
+		var tagtext = document.createTextNode("Hello");
+		
+		tag.appendChild(tagtext);
+		document.body.appendChild(tag);
+		
+		var imgTag = document.createElement("img");
+		imgTag.setAttribute("src", 
+				"background01.gif");
+		
+		var aTag = document.createElement("a");
+		aTag.setAttribute("href", "http://www.naver.com");
+		aTag.setAttribute("target", "_blank");
+		
+		aTag.appendChild(imgTag);
+		document.body.appendChild(aTag);
+	}
+</script>
+</head>
+<body>
+	<!-- <img src="fileName"> -->
+</body>
+</html>

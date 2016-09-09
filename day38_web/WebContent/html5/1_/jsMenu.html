@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="EUC-KR"><title>왼쪽 메뉴 만들기</title>
+<!-- 스타일 적용 -->
+<style type="text/css">
+	A.text { color : black;  text-decoration: none; font : x-small gerogia, serif ;  font-weight: bold ; }
+</style>
+
+<!-- 자바스크립스 -->
+<script type="text/javascript">
+	function MouseOver(  ) {
+		document.getElementById("myBtn").onclick =  Date();
+	}	
+	function MouseOut( ) {
+		document.getElementById("myBtn").innerHTML = "오늘의 날짜/시간";
+	}
+</script>
+</head><body  bgcolor="skyblue">
+	<button id="myBtn" onmouseover="MouseOver()">Try it</button>
+	
+	
+	<table border="0" cellpadding="3"  cellspacing="1">
+		<tr><td align="center"  width="200"  bgcolor="silver" 
+					onmouseover="MouseOver( ); "
+					onmouseout="MouseOut( this, 'silver' ); ">
+					<a href="jsTest.html"  target="_blank"  class="text" >
+						<font face="굴림" > <span style="font-size : 12px; "> 나의 소개 </span></font>
+					</a>						
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center"  width="200"  bgcolor="silver" 
+					onmouseover="MouseOver( this, 'yellow' ); "
+					onmouseout="MouseOut( this, 'silver' ); ">
+					<a href="jsCalc.html"  target="_blank"  class="text" >
+						<font face="굴림" > <span style="font-size : 12px; "> 포토 앨범 </span></font>
+					</a>						
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center"  width="200"  bgcolor="silver" 
+					onmouseover="MouseOver( this, 'yellow' ); "
+					onmouseout="MouseOut( this, 'silver' ); ">
+					<a href="E:\th125\th125_Html_JS\Labs\day36_web\web\html5\ch2\marquee.html"  target="right"  class="text" >
+						<font face="굴림" > <span style="font-size : 12px; "> 회원 가입 </span></font>
+					</a>						
+			</td>
+		</tr>
+		
+	</table>
+</body>
+</html>
+
+
+
+
+

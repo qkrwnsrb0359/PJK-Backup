@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단</title>
+<script type="text/javascript">
+    function dan() {
+    	var tableStart = "<table border=1 align='center'>";
+    	var tableEnd = "</table>";
+        document.write(tableStart);
+        for (var i = 1; i < 10; i++) {
+        	document.write("<tr>");
+            for (var j = 2; j < 10; j++) {
+                document.write("<td align='center'>" + j + " * " + i + " = " + (i * j) + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write(tableEnd);
+    }
+</script>
+</head>
+<body>
+<h1 align="center">구구단</h1>
+<script type="text/javascript">
+dan();
+</script>
+ 
+</body>
+</html>

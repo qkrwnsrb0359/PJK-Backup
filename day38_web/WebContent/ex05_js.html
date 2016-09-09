@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>th125 web project</title>
+<script type="text/javascript">
+	function makePerson(name, phone, addr) {
+		var person = {
+				name : "박준규", 
+				phone : "010-4026-9571", 
+				addr : "수원시 영통구", 
+				
+				info : function() {
+					var list = '';
+					for(var key in this) {
+						list += (key + " : " + this[key] + '\n');
+					}
+					
+					alert(list);
+				}
+		};
+		
+		return person;
+	}
+	/*
+ 	var p = makePerson("박준규", "0000", "수원시");
+	var p2 = makePerson("ㅋㅋㅋ", "1111", "어엉엉");
+	p.info();
+	p2.info(); */
+	
+	var person = []; //var 배열명 = [값1, 값2.........]
+	person.push(makePerson("박정희", "0000", "서울시"));
+	person.push(makePerson("전투환", "1111", "연희동"));
+	
+	for(var i in person) {
+		person[i].info();
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

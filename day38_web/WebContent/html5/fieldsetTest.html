@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폼 만들기</title>
+<style>
+	ul {
+		list-style-type: none;
+	}
+	fieldset {
+		margin: 5px 2px;
+	}
+	label {
+		font-size: 14px;
+		line-height: 25px;
+	}
+</style>
+</head>
+<body>
+   <h1>회원 가입 양식</h1>
+   <form>
+      <fieldset> 
+         <legend>로그인 정보</legend>
+         
+         <ul>
+            <li><label for="id">아이디 : <em>*</em> <input type=text id=id></label> </li>
+            <li><label for="pwd">비밀번호 : <em>*</em> <input type=password id=pwd></label></li>
+         </ul>
+      </fieldset>
+
+      <fieldset> 
+         <legend>가입자 정보</legend>
+         
+         <ul>
+            <li><label for="name">이름 : <em>*</em> <input type=text id=name></label></li>
+            <li><label for="mail">E-Mail : <em>*</em> <input type=email id=mail></label></li>
+            <li><label for="birth">생년월일 : <em>*</em> <input type=date id=birth></label></li>
+         </ul>
+      </fieldset>
+      <fieldset>
+      	<input type="submit" value="가입하기">
+      </fieldset>
+   </form>
+
+</body>
+</html>

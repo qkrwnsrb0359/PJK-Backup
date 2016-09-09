@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<link rel="stylesheet" type="text/css" href="..\css\test.css">
+<title>form get / post test</title>
+<!-- 	<style>
+		body {
+			font-size: 20px;
+			color: red;
+			font-weight: bold;
+			background-color: aqua;
+		}
+	</style> -->
+</head>
+<body>
+	<!-- get 전송 방식 : 글자수에 제한있음(255), 보안 취약 -->
+<!-- 	<form action="result.jsp" method="get">
+		이름:<input type="text" name="name" placeholder="이름"><br>
+		비번:<input type="password" name="pwd" placeholder="비밀번호"><br>
+		<input type="submit" value="전송">
+		<input type="reset" value="취소">
+	</form> -->
+	<!--  post 전송 방식 : 글자수에 제한 없음. 약한 보안적이다. -->
+	<form action="result.jsp" method="post">
+		이름:<input type="text" name="name" placeholder="이름"><br>
+		비번:<input type="password" name="pwd" placeholder="비밀번호"><br>
+		<input type="submit" value="전송">
+		<input type="reset" value="취소">
+	</form>
+	
+	<p>피태그</p><br>
+	<p><em>피태그</em></p><br>
+	<p>피태그</p><br>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>th125 web project</title>
+<script type="text/javascript">
+	window.onload = function() {
+		alert('change');
+		
+		var header1 = document.getElementById('header2');
+		header1.innerHTML = "222222222222222222222222222222222222222";
+		
+		var name = document.getElementById('header1');
+		name.innerHTML = '111111111111111111111111111111111111111';
+	}
+</script>
+<script type="text/javascript">
+	function myNum() {
+		var x = 100;
+		var y = 200;
+		var su = eval("x + y") + "<br>";
+		var num = eval("2 + 5") + "<br />"
+		var num2 = eval("x + 50") + "<br />"
+		
+		var res = su + num2;
+		document.getElementById('demo').innerHTML = res;
+	}
+	
+	function countIncrease() {
+		var spanObj = document.getElementById('countSpan');
+		spanObj.innerHTML = parseInt(spanObj.innerHTML) + 1;
+	}
+</script>
+</head>
+<body>
+	<span id="countSpan">0</span>번 클릭 &nbsp;&nbsp;&nbsp;
+	<input type="button" value="클릭" onclick="countIncrease()">
+	<h1 id="header1">Header-1</h1>
+	<h1 id="header2">Header-2</h1>
+	<button onclick="myNum()">누르셈</button>
+	<p id="demo"></p>
+</body>
+</html>

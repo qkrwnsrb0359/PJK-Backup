@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단 출력</title>
+<script type="text/javascript">
+ 
+    function dan() {
+        document.write("<table border=1 align='center'>");
+        for (var i = 1; i < 10; i++) {
+            for (var j = 2; j < 10; j++) {
+                document.write("<td align='center'>" + j + " * " + i + " = " + (i * j));
+            }
+            document.write("<tr>");
+        }
+        document.write("</table>");
+    }
+</script>
+ 
+</head>
+<body>
+ 
+<font size="5" color="blue"><center>구구단</center></font>
+ 
+	<script type="text/javascript">
+	dan();
+	</script>
+ 
+</body>
+</html>

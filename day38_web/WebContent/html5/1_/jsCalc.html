@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head><meta charset="EUC-KR"><title>계산기</title>
+
+<script type="text/javascript">
+	function cal( intNum ) {
+		frm.result.value += intNum;
+	}
+	
+	function answer() {
+		frm.result.value = eval( document.frm.result.value );
+	}
+	
+	function clearcal() {
+		frm.result.value = "";
+	}
+</script>
+
+<style type="text/css">
+	table {
+		background-color: green;
+		border-width: 1px;
+		color: blue;
+		border-style: solid;
+		padding: 5px;
+		text-align: center;
+		width: 300px;
+		height: 100px;
+    }
+</style>
+
+</head>
+<body>
+	<form name="frm">
+		<table border="1" align="center">
+			<tr>	<td  height="0" bgcolor="gray">
+					<input type="text" name="result"  size="30">
+				</td></tr>
+			<tr><td>
+					<input type="button"  value="      7      "  onclick=" cal('7') " class="btn">
+					<input type="button"  value="      8     "  onclick=" cal('8') " class="btn">
+					<input type="button"  value="      9     "  onclick=" cal('9') " class="btn">
+					<input type="button"  value="      /     "  onclick=" cal('/') " class="btn">
+				</td>
+			</tr>
+			<tr><td>
+					<input type="button"  value="      4     "  onclick=" cal('4') " class="btn">
+					<input type="button"  value="      5     "  onclick=" cal('5') " class="btn">
+					<input type="button"  value="      6     "  onclick=" cal('6') " class="btn">
+					<input type="button"  value="      *     "  onclick=" cal('*') " class="btn">
+				</td>
+			</tr>
+			<tr><td>
+					<input type="button"  value="      1     "  onclick=" cal('1') " class="btn">
+					<input type="button"  value="      2     "  onclick=" cal('2') " class="btn">
+					<input type="button"  value="      3     "  onclick=" cal('3') " class="btn">
+					<input type="button"  value="      -     "  onclick=" cal('-') " class="btn">
+				</td>
+			</tr>
+			<tr><td>
+					<input type="button"  value="      0     "  onclick=" cal('0') " class="btn">
+					<input type="button"  value="      .     "  onclick=" cal('.') " class="btn">
+					<input type="button"  value="      +     "  onclick=" cal('+') " class="btn">
+					<input type="button"  value="      c     "  onclick=" clearcal() " class="btn">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4"  align="center">
+					<input type="button"  value="             =               "  onclick=" answer();" class="btn">
+	 			</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+
+
+
+

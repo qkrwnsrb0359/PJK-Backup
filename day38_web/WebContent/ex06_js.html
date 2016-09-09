@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>th125 web project</title>
+<script type="text/javascript">
+	var now = new Date();
+	
+	var year = now.getFullYear();
+	var month = now.getMonth() + 1;
+	var date = now.getDate();
+	
+	Date.prototype.toDay = function() {
+		var dayofWeek = this.getDay();
+		var week = ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
+		return week[dayofWeek];
+	}
+	
+	alert('오늘은 ' + year + '년' + month + '월' + date + '일(' + now.toDay() + ')입니다.');
+	
+	document.write('오늘은' + year + '년' + month + '월' + date + '일(' + now.toDay() + ')입니다.');
+</script>
+</head>
+<body>
+
+</body>
+</html>

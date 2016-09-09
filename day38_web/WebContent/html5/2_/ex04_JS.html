@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		/*  "<h3>Here's a headline!</h3>".escape();  */
+		
+		//escape 함수는 전역함수로 제공 
+		var escaped = escape("<h3>Here's a headline!</h3>");
+		var unescaped = unescape(escaped);
+		console.log(unescaped);
+		document.write(unescaped)
+		document.write("<br><br>")
+		//URL 엔코딩
+		var url = "http://mysite.com/?stuff=\"안 대혁!&bar=";
+		var encodedURL = encodeURI(url);
+		var decodedURL = decodeURI(encodedURL);
+		console.log(decodedURL);
+		document.write(decodedURL)
+////////////////////////////////////////////////////////	
+	function changetext(id){
+		id.innerHTML="Ooops!";
+	}
+	function displayDate() {
+		document.getElementById("demo").innerHTML = Date();
+	}
+</script>
+</head>
+<body>
+<h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1> <br><br>
+<h1 onclick="changetext(this)">Click on this text!</h1> <br><br>
+<p id="demo" > </p>
+<input type="button"  onclick="displayDate()" value="Click">
+</body>
+</html>
+
+
+
+
+
+
