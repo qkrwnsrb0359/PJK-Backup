@@ -9,12 +9,13 @@ public class ReplyDTO {
 	private String content;
 	private Date writedate;
 	private int readnum;
-	private String idx; 
+	private String idx; //부모 테이블의 idx참조..
 	
 	public ReplyDTO(){
 		
 	}
 
+	//인자 생성자 -------------
 	public ReplyDTO(int no, String writer, String pwd, String content,
 			Date writedate, int readnum, String idx) {
 		super();

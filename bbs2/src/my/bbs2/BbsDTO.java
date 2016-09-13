@@ -2,6 +2,9 @@ package my.bbs2;
 
 import java.sql.Date;
 
+
+//	Value Object, Data Transfer Object
+
 public class BbsDTO {
 	private int idx;
 	private String writer;
@@ -19,11 +22,10 @@ public class BbsDTO {
 	private int lev;
 	private int sunbun;
 	
-	// Constructor
 	public BbsDTO(){
 		super();
 	}
-
+	
 	public BbsDTO(int idx, String writer, String email, String homepage,
 			String pwd, String subject, String content, Date writedate,
 			int readnum, String filename, long filesize, int refer, int lev,
@@ -43,7 +45,7 @@ public class BbsDTO {
 		this.refer = refer;
 		this.lev = lev;
 		this.sunbun = sunbun;
-	} //--------------------------
+	} 
 	
 	public BbsDTO(int idx, String writer, String email, String homepage,
 			String pwd, String subject, String content) {
@@ -56,9 +58,6 @@ public class BbsDTO {
 		this.subject = subject;
 		this.content = content;
 	} 
-	
-	
-	//setter, getter --------------
 	
 	public int getIdx() {
 		return idx;
@@ -145,4 +144,4 @@ public class BbsDTO {
 		this.sunbun = sunbun;
 	}
 	
-}
+}//////////////////////////////////////////////////////////////////////////////////

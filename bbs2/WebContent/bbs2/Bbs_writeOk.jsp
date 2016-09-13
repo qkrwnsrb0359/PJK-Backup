@@ -37,7 +37,7 @@
 <script type = "text/javascript">
 <!--
 	alert("<%=msg%>");
-	location.href="<%=url%>";
+	location.href=request.getContextPath() + "/bbs2/bbs_write.jsp";
 -->
 </script>
 

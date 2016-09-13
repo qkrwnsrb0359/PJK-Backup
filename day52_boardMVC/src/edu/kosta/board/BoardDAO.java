@@ -305,8 +305,8 @@ public class BoardDAO {	//Controller
 			if (true) {
 			conn = getConnection();
 			pstmt = conn.prepareStatement("delete from board where num=? and passwd=?");
-			pstmt.setInt(1, num);	
-			pstmt.setString(2, passwd);	
+			pstmt.setInt(1, num);
+			pstmt.setString(2, passwd);
 			result = pstmt.executeUpdate();
 			} else {
 				result = 0;

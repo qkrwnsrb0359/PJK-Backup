@@ -1,0 +1,105 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>bbs_write.jsp</title>
+<script type="text/javascript" src="../js/alert.js"></script>
+<script type="text/javascript">
+function check(){
+	if(!f.subject.value){
+		alert("제목 입력");
+		f.subject.focus();
+		return;
+	}
+	if(!f.content.value){
+		alert("내용 입력");
+		f.content.focus();
+		return;
+	}
+	if(!f.writer.value){
+		alert("이름 입력");
+		f.writer.focus();
+		return;
+	}
+	if(!f.email.value){
+		alert("이메일 입력");
+		f.email.focus();
+		return;
+	}
+	if(!f.pwd.value){
+		alert("비밀번호 입력");
+		f.pwd.focus();
+		return;
+	}
+	document.f.submit();
+} 
+</script>
+</head>
+<body>
+<center>
+		<br>
+		<font color="navy" size="5">
+			<b>글 쓰 기</b>
+		</font>
+		<br>
+	<hr width=500 color="red">
+		<a href="${path }/bbs2/bbs_list.jsp">LIST</a>|<a href="${path }/bbs2/bbs_list.jsp">HOME</a>
+	<hr width=500 color="red">
+	<!-- 파일 전송까지 하기 위해서~~enctype추가 -->
+	<form name="f" method="post" enctype="multipart/form-data" action="Bbs_writeOk.do">
+		<table border=1 width=600>
+			<tr>
+				<td width="20%" align="center"><B>제 목</B></td>
+				<td width="80%">
+					<input type="text" name="subject" size=60>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%" align="center"><B>내 용</B></td>
+				<td width="80%">
+					<textarea name = content rows=10 cols=60></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%" align="center"><B>글쓴이</B></td>
+				<td width="80%">
+					<input type="text" name="writer" size=60>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%" align="center"><B>이메일</B></td>
+				<td width="80%">
+					<input type="text" name="email" size=60>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%" align="center"><B>홈페이지</B></td>
+				<td width="80%">
+					<input type="text" name="homepage" size=60 value="http://" >
+				</td>
+			</tr>
+			<tr>
+				<td width="20%" align="center"><B>비밀번호</B></td>
+				<td width="80%">
+					<input type="password" name="pwd" size=60>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%" align="center"><B>첨부파일</B></td>
+				<td width="80%">
+					<input type="file" name="filename" size=40>
+				</td>
+			</tr>
+			<tR>
+				<td colspan="2" align="center">
+					<input type="button" value="글쓰기" onclick="check();">
+					<input type ="reset" value="다시 쓰기">
+				</td>
+			</tR>
+		</table>
+	</form>
+</center>
+</body>
+</html>

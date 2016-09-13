@@ -61,17 +61,17 @@ public class BbsManager {
 		throws SQLException{
 		return new BbsDAO().edit(idx);
 	}
-	
+
 	public int editOk(HttpServletRequest req)
 		throws SQLException{
 		return new BbsDAO().editOk(req);
 	}
-	
+
 	public int rewriteOk(MultipartRequest mr)
 		throws SQLException{
 		return new BbsDAO().rewriteOk(mr);
 	}
-	
+
 	public int replySave(String idx, String writer, String content, String pwd)
 		throws SQLException{
 		return new BbsDAO().replySave(idx,writer,content, pwd);
